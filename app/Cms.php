@@ -16,7 +16,7 @@ class Cms
     /**
      * Cms constructor.
      */
-    public function __construct(DI $di): void
+    public function __construct(DI $di)
     {
         $this->di = $di;
     }
@@ -24,7 +24,7 @@ class Cms
     /**
      * Run CMS.
      */
-    public function run()
+    public function run(): void
     {
         // code...
     }

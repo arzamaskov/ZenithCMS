@@ -11,19 +11,19 @@ class DI
      */
     private $container = [];
 
-    public function set($key, $value): DI
+    public function set(string $key, array $value): DI
     {
         $this->container[$key] = $value;
 
         return $this;
     }
 
-    public function get($key)
+    public function get(string $key)
     {
-        return $this->has($key) ?: $this->container[$key];
+        return $this->has($key) ? $this->container[$key] : null;
     }
 
-    public function has($key): bool
+    public function has(string $key): bool
     {
         return isset($this->container[$key]);
     }
